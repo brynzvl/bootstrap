@@ -1,3 +1,10 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/<bootstrap>/'
+  }
+} : {}
+
+
 import pkg from './package'
 
 export default {
@@ -46,6 +53,9 @@ export default {
   /*
   ** Build configuration
   */
+
+  ...routerBase,
+
   build: {
     /*
     ** You can extend webpack config here
