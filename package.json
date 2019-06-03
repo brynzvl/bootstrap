@@ -12,7 +12,6 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
-
   },
   "dependencies": {
     "bootstrap": "^4.1.3",
