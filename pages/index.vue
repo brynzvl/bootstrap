@@ -2,10 +2,13 @@
     <div>
       <div class="jumbotron">
   
-        <h1 class="display-3">What is Vue.js?</h1>
+        <h1 v-if="show" class="display-3">What is Vue.js?</h1>
+        <h1 v-else class="display-3">Get Started</h1>
         <p class="lead">Vue <strong>(pronounced /vjuː/, like view) </strong>is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the
           view layer only, and is easy to pick up and integrate with other libraries or existing projects.</p>
-        <p><a class="btn btn-lg btn-success" id="btn-success" href="https://vuejs.org/" role="button" data-toggle="tooltip" data-placement="bottom" title="www.vuejs.org">Get Started</a></p>
+        <p>
+          <button v-on:click="show=!show" class="btn btn-lg btn-success" id="btn-success" role="button" data-toggle="tooltip" data-placement="bottom" title="www.vuejs.org">Get Started</button>
+        </p>
   
       </div>
       <div class="row marketing">
@@ -42,8 +45,15 @@
   import Logo from '~/components/Logo.vue'
   
   export default {
+    data () {
+      return {
+        show: true, 
+      }
+    },
     components: {
       Logo
     }
   }
+
+  
 </script>

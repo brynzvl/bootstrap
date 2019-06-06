@@ -5,7 +5,7 @@
 
       <ul class="nav b-nav-pills float-left">
         <li class="nav-item">
-          <nuxt-link class="nav-link" id="logo-link" to="/index">Vue.js</nuxt-link>
+          <nuxt-link  id="logo-link"  class="nav-link" to="/index">Vue.js</nuxt-link>
         </li>
       </ul>
 
